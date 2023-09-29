@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+<div class="flex justify-center items-center min-h-screen">
+  <div class="w-full max-w-sm">
+    <h2 class="text-3xl font-semibold mb-6 text-center">
+      Login to Your Account
+    </h2>
+    <form method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      {{ form.hidden_tag() }}
+      <div class="mb-4">
+        {{ form.email.label(class="block text-gray-600 text-sm font-bold mb-2")
+        }} {{ form.email(class="appearance-none border rounded w-full py-2 px-3
+        text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+      </div>
+      <div class="mb-4">
+        {{ form.password.label(class="block text-gray-600 text-sm font-bold
+        mb-2") }} {{ form.password(class="appearance-none border rounded w-full
+        py-2 px-3 text-gray-700 leading-tight focus:outline-none
+        focus:shadow-outline") }}
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-600 text-sm font-bold">
+          {{ form.remember(class="mr-2 leading-tight") }} Remember Me
+        </label>
+      </div>
+      <div class="flex items-center justify-between">
+        <input
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          value="Login"
+        />
+        <a
+          href="{{ url_for('register') }}"
+          class="text-gray-600 hover:underline"
+          >Need an account?</a
+        >
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

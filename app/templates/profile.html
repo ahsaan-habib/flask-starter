@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<!-- Profile Section -->
+<section class="bg-white py-16">
+    <div class="container mx-auto">
+        <div class="max-w-md mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">User Profile</h2>
+            <div class="mb-4">
+                <strong>Username:</strong> {{ current_user.username }}
+            </div>
+            <div class="mb-4">
+                <strong>Email:</strong> {{ current_user.email }}
+            </div>
+            <!-- Add more user information here as needed -->
+
+            <a href="{{ url_for('logout') }}"
+                class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full text-lg">Logout</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

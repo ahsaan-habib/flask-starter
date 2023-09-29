@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Landing Page Section -->
+<section class="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-16">
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-semibold mb-4">Welcome to My Flask App</h1>
+        <p class="text-lg mb-8">A simple and powerful web application built with Flask.</p>
+        <a href="{{ url_for('register') }}"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-lg">Get Started</a>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="bg-white py-16">
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-semibold text-center mb-8">Explore Our Features</h2>
+        <!-- Feature Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature Card 1 -->
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">User Authentication</h3>
+                <p class="text-gray-700">Secure user registration and login system.</p>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Customizable Templates</h3>
+                <p class="text-gray-700">Easily customize templates for your project.</p>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Responsive Design</h3>
+                <p class="text-gray-700">Responsive layout for various screen sizes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
